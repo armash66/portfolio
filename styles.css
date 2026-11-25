@@ -46,7 +46,13 @@ main{padding-top:20px}
 .front-splash>p{font-size:16px;margin:0;max-width:410px}
 .front-splash em{font-style:italic}
 .front-splash .kicker{margin-bottom:8px}
-.news-columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr) minmax(0,1fr) minmax(0,1.15fr)}
+.news-columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr) minmax(0,1.15fr)}
+.off-clock{border-top:var(--double);padding-top:20px}
+.pastime-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.pastime-columns .column-story{border-bottom:0;padding:0;margin:0}
+.pastime-columns .column-story+.column-story{border-left:1px solid var(--rule);padding-left:24px}
+.pastime-columns .column-story:nth-child(2){grid-column:2;grid-row:1 / span 2}
+.pastime-columns .column-story:nth-child(3){grid-column:1;border-left:0;border-top:1px solid var(--rule);padding:16px 0 0}
 .news-column{padding-inline:var(--gutter)}
 .news-column:first-child{padding-left:0}
 .news-column:last-child{padding-right:0}
@@ -158,6 +164,8 @@ main{padding-top:20px}
  .news-column+.news-column{border:0}
  .news-column:nth-child(even){border-left:1px solid var(--rule);padding-left:24px}
  .news-column:nth-child(n+3){border-top:var(--double);padding-top:20px}
+ .news-column.notices-column{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+ .notices-column .resume-ad,.notices-column .contact-notice,.notices-column .column-brief{margin:0}
  .lead-column{grid-column:2;grid-row:1}
  .article-columns{columns:1}
  .case-study{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -195,6 +203,9 @@ main{padding-top:20px}
  .news-column,.news-column:nth-child(even),.news-column:nth-child(n+3){padding:20px 0;border:0;border-bottom:1px solid var(--rule)}
  .news-column:first-child{padding-top:0}
  .news-column:last-child{border:0;padding-bottom:0}
+ .news-column.notices-column,.pastime-columns{display:block}
+ .notices-column .contact-notice,.notices-column .column-brief{margin-top:20px}
+ .pastime-columns .column-story+.column-story{border-left:0;border-top:1px solid var(--rule);padding:20px 0 0;margin-top:20px}
  .engraving{max-width:400px}
  .news-column h2,.lead-column h2{font-size:32px}
  .case-visual{margin:20px 0}
