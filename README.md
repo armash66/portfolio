@@ -40,4 +40,4 @@ This runs JavaScript syntax checks. For visual checks, visit all four hash route
 
 ## Letterpress design
 
-The edition uses dense uneven columns, an original SVG workbench illustration, boxed notices, layered paper edges, grain and a fold shadow. Navigation animates in either direction; link, illustration and calendar hover effects remain subtle. Reduced-motion preferences disable movement. The front page introduces Armash, the work page retains only two main projects, and the record and activity pages have their own compositions.
+All four pages share a single editorial system: cream paper, black ink, consistent headline sizes, 24px column gutters, thin column rules and double section rules. The masthead alone uses blackletter. The workbench illustration appears only on the front page. Layouts collapse from columns to a single reading order at smaller widths; activity calendars scroll inside their own containers. Navigation uses a brief opacity transition, disabled by reduced-motion preferences. The front page introduces Armash, the work page retains two main projects, and the record and activity pages use the same visual rules with different content.
