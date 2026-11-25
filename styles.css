@@ -226,43 +226,5 @@ main{padding-top:20px}
  .folio>span{grid-row:2}
  .folio>span:last-child{grid-column:2}
 }
-/* Keep the first reading short; supporting detail is opt-in. */
-.paper{max-width:1240px}
-.publication{font-size:clamp(32px,4.4vw,60px)}
-.quiet-front{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:48px;padding:26px 0 32px}
-.front-intro h1{font:clamp(48px,5.5vw,76px)/1.05 'Libre Caslon Display',Georgia,serif;margin:8px 0 22px}
-.intro-deck{font:26px/1.35 var(--display);max-width:490px}
-.front-intro>p:not(.kicker):not(.intro-deck){max-width:470px}
-.front-intro .links{margin-top:24px;gap:10px 0}
-.resume-line{margin-top:18px;font-size:14px}
-.front-selection{border-left:1px solid var(--rule);padding-left:32px}
-.front-selection article{margin:20px 0;padding-bottom:16px;border-bottom:1px solid var(--rule)}
-.front-selection h2 a{text-decoration:none}
-.front-selection h2 a:hover{text-decoration:underline}
-.reading-links{display:flex;flex-wrap:wrap;gap:16px 32px;border-top:1px solid var(--rule);padding-top:16px;font-size:14px}
-.essential-projects,.essential-background,.quiet-interests{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
-.essential-projects>article+article,.essential-background>section+section,.quiet-interests>article+article{border-left:1px solid var(--rule);padding-left:32px}
-.essential-projects h2{font-size:38px}
-.essential-projects .tech{margin-top:20px}
-summary{cursor:pointer;font-size:14px;text-underline-offset:3px}
-summary:hover{text-decoration:underline}
-summary:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
-.project-detail{margin-top:24px}
-.project-detail[open] summary{margin-bottom:16px}
-.quiet-details{border-top:1px solid var(--rule);margin-top:32px;padding-top:16px}
-.quiet-details[open] summary{margin-bottom:16px}
-.background-footnote{border-top:1px solid var(--rule);margin-top:24px;padding-top:16px;font-size:14px}
-.background-footnote strong{margin-right:12px}
-.off-clock{border-top:1px solid var(--rule)}
-.quiet-interests h3{font-size:25px}
-.stats{margin:10px 0}
-.activity-edition h2{font-size:28px}
-@media(max-width:699px){
- .quiet-front,.essential-projects,.essential-background,.quiet-interests{display:block}
- .quiet-front{padding:12px 0 20px}
- .front-selection,.essential-projects>article+article,.essential-background>section+section,.quiet-interests>article+article{border-left:0;border-top:1px solid var(--rule);padding:24px 0 0;margin-top:24px}
- .intro-deck{font-size:24px}
- .front-selection article:last-of-type{margin-bottom:12px}
-}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
 @media print{body{padding:0;background:white}.paper{box-shadow:none;background:white;padding:0}.folio nav,.skip{display:none}}
