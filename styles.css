@@ -29,6 +29,8 @@ img,svg{max-width:100%;height:auto;display:block}
 figcaption{font:italic 13px/1.4 Georgia,serif;color:var(--muted);margin-top:8px}
 .brief,.column-story{border-bottom:1px solid var(--rule);margin-bottom:var(--space);padding-bottom:var(--space)}
 .brief:last-child,.column-story:last-child{border:0;margin:0;padding:0}
+.pastime-illustration{max-width:180px;margin:0 0 12px;color:var(--ink)}
+.pastime-illustration svg{width:100%;height:auto}
 .nameplate{text-align:center;border-bottom:var(--double)}
 .publication{display:block;font:clamp(36px,5vw,70px)/1.15 'UnifrakturMaguntia',Georgia,serif;text-decoration:none;padding-bottom:16px}
 .masthead-byline{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--rule);padding:7px 0;font-size:12px;text-transform:uppercase;letter-spacing:.7px}
