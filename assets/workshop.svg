@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" fill="none">
+<defs><pattern id="h" width="7" height="7" patternUnits="userSpaceOnUse"><path d="M0 7 7 0" stroke="#302e26" stroke-width=".6" opacity=".35"/></pattern><pattern id="dot" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".8" fill="#302e26" opacity=".3"/></pattern></defs>
+<rect width="900" height="480" fill="#d9cfb7"/><rect x="18" y="18" width="864" height="444" stroke="#514c40"/><path d="M28 364H872M28 374H872" stroke="#514c40"/>
+<path d="M60 59H830V350H60Z" fill="url(#dot)"/>
+<g stroke="#302e26" stroke-width="3"><path d="M261 88h349l-14 225H247Z" fill="#e8dfc9"/><path d="M273 101h321l-12 193H261Z" fill="#302e26"/><path d="m247 313-57 43h445l-39-43" fill="url(#h)"/><path d="M190 356v9h445v-9M370 335h90l10 13H360Z"/><path d="m302 140-17 15 17 15m34-30 17 15-17 15m-15-38-9 55" stroke="#e7ddc5"/><path d="M287 213h143m-143 16h239m-239 16h196m-196 16h108" stroke="#beb69f" stroke-width="4"/>
+<path d="m72 304 112-19 40 65-116 19Z" fill="#e9dfc7"/><path d="m87 312 82-14m-75 24 82-14m-74 24 82-14m-74 24 58-10" stroke-width="1.4"/>
+<path d="M675 277h81v65q-40 30-81 0Z" fill="#e9dfc7"/><path d="M756 287c55-12 50 55 0 38M675 277q40-20 81 0-40 20-81 0"/><path d="M697 254c-18-22 20-29 3-50m27 50c-18-22 20-29 3-50" stroke-width="1.5"/>
+<path d="M665 150 721 73l-9-14-65 82m18 9-21 14 3-23" fill="url(#h)"/><path d="M771 353 816 237l10 4-44 116Z" fill="#302e26"/>
+<path d="M87 104h105v113H87Z" fill="#e8dfc9"/><path d="M101 123h77m-77 15h54m-54 15h67m-67 15h42m-42 15h70m-70 15h51" stroke-width="1.2"/>
+</g><path d="M90 394h720m-720 9h720m-720 9h720m-720 9h720m-720 9h720" stroke="#514c40" opacity=".35"/>
+<text x="450" y="451" text-anchor="middle" font-family="Georgia,serif" font-size="13" letter-spacing="3" fill="#302e26">A FEW TOOLS. A PLACE TO BEGIN.</text></svg>
