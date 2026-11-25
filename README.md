@@ -1,6 +1,19 @@
 # The Engineering Diaries
 
-A four-page newspaper portfolio for Armash Ansari. Local first, with no build step or package dependencies.
+Armash Ansari's personal portfolio, presented as a four-page newspaper. A place for my work in backend development and applied machine learning, my background, and a few things I enjoy outside engineering.
+
+The design takes its cues from old newspapers: a centered masthead, historic type, warm paper, fine dividing rules, and uneven columns. The layout adapts to smaller screens while keeping a clear reading order.
+
+## Inside the paper
+
+- **Front page** — an introduction, work interests, and contact details.
+- **Selected work** — ECG ML and EduQuery, with brief links to other projects.
+- **Background** — education, internships, and technical skills.
+- **Daily record** — GitHub contributions, LeetCode practice, and weekend interests in films and beginner chess.
+
+## Built with
+
+HTML, CSS, and vanilla JavaScript, with a small Node.js endpoint for LeetCode data. No package dependencies or build step. Fonts are IM Fell English, Libre Caslon Display, and UnifrakturMaguntia, loaded through Google Fonts.
 
 ## Run locally
 
@@ -10,25 +23,32 @@ Requires Node.js 20 or newer.
 npm run dev
 ```
 
-On PowerShell with script execution restricted, use `npm.cmd run dev` or `node server.mjs`.
-Open http://127.0.0.1:4173. Refresh after editing source files.
+Open [localhost:4173](http://127.0.0.1:4173). Refresh after editing files. On Windows, use `npm.cmd run dev` if PowerShell blocks npm scripts.
 
-## Edit your details
+## Updating the portfolio
 
-- `content.js`: résumé path, email, LinkedIn, LeetCode, project entries, and milestones.
-- `app.js`: article copy, page composition, navigation, and GitHub activity.
-- `styles.css`: typography, newspaper columns, mobile layout, and page transitions.
-- `assets/`: illustrations, project screenshots, and your résumé PDF.
+| File | Contents |
+| --- | --- |
+| `content.js` | Profile, contacts, education, experience, and projects |
+| `app.js` | Page content, navigation, and activity displays |
+| `styles.css` | Layout, typography, responsive styles, and transitions |
+| `api/leetcode.mjs` | LeetCode profile and calendar endpoint |
+| `server.mjs` | Local preview server |
+| `assets/` | Images and other static files |
 
-Set `resume` in `content.js` to a local PDF path such as `assets/armash-ansari-resume.pdf`. Only publish contact information you want on the public website. No upload dashboard is included.
+To add a resume, place the PDF in `assets/` and set `resume` in `content.js` to its path, such as `assets/armash-ansari-resume.pdf`. The resume link is not configured yet.
 
-The front page introduces Armash. The work page features ECG ML and EduQuery, with other experiments reduced to one-line links. The background page presents education, internship experience and skills from the supplied resume, without repeating project features. Current grades are omitted because the supplied resume is outdated. A replacement resume PDF is still needed. Contact details and the public LeetCode username are configured. Anukool India Pvt Ltd is listed without dates or duties pending the updated resume.
+## Activity data
 
-## Data and presentation
+GitHub contributions use the public [GitHub Contributions API](https://github.com/grubersjoe/github-contributions-api). LeetCode data is fetched through `/api/leetcode` using its public GraphQL endpoint, without account credentials.
 
-The GitHub panel uses the public GitHub Contributions API at `github-contributions-api.jogruber.de/v4/armash66?y=last`. This unofficial service scrapes the public calendar and caches it for one hour. The website also caches successful responses in memory for one hour, validates daily entries, and shows a fallback message on failure. The calendar reports the dates actually returned, contribution totals, active days, and the maximum daily count. On mobile, only the calendar scrolls horizontally. LeetCode uses a same-origin `/api/leetcode` endpoint backed by its public GraphQL profile data. It needs no login, caches for one hour, and returns a labelled stale record if an upstream refresh fails. The calendar shows UTC submission dates for the current year; solved totals are all-time. This is an undocumented public endpoint and may change.
+Successful responses are cached for an hour. The LeetCode cache is held in memory and can reset when a server instance restarts. Both integrations depend on unofficial services or endpoints; unavailable data is handled with a fallback message. LeetCode's calendar covers the current year in UTC, while solved totals cover all time.
 
-Fonts are loaded from Google Fonts with local serif fallbacks. The ECG feature has an architecture schematic, not a clinical trace or result. The EduQuery feature illustrates its five parsing states with examples, not real student records. The old workshop illustration remains in assets but is no longer displayed. Pages use a brief CSS perspective transition; a fully simulated draggable paper curl is not implemented. Reduced-motion settings disable the animation.
+## Hosting
+
+For Vercel, select **Other** as the framework, leave the build command empty, and use `.` as the output directory. The `api/` directory supplies the LeetCode function; `server.mjs` is for local previews.
+
+A static-only host needs an equivalent API endpoint. Verify both activity panels on the live site after deployment.
 
 ## Checks
 
@@ -36,8 +56,4 @@ Fonts are loaded from Google Fonts with local serif fallbacks. The ECG feature h
 npm run check
 ```
 
-This runs JavaScript syntax checks. For visual checks, visit all four hash routes at desktop and mobile widths. The LeetCode panel requires a backend. `server.mjs` serves it for local previews; `api/leetcode.mjs` also exports a Vercel-compatible request handler. A purely static host needs an equivalent API function. Deployment has not been performed.
-
-## Letterpress design
-
-All four pages share a single editorial system: cream paper, black ink, consistent headline sizes, 24px column gutters, thin column rules and double section rules. The masthead alone uses blackletter. The workbench illustration appears only on the front page. Layouts collapse from columns to a single reading order at smaller widths; activity calendars scroll inside their own containers. Navigation uses a brief opacity transition, disabled by reduced-motion preferences. The front page introduces Armash, the work page retains two main projects, and the record and activity pages use the same visual rules with different content.
+This checks JavaScript syntax in `app.js` and `server.mjs`. For layout checks, visit all four pages at desktop and mobile widths. Page transitions respect reduced-motion preferences.
